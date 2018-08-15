@@ -33,7 +33,6 @@ class  GateIO(object):
             sign += key + '=' + value + '&'
         bSign = bytes(sign[:-1])
         mySign = hmac.new(bSecretKey, bSign, hashlib.sha512).hexdigest()
-        print(mySign)
         return mySign
 
     #所有交易对
